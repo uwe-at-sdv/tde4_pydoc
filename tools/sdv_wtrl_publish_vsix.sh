@@ -26,4 +26,6 @@ if [[ -z "${VSCE_PAT}" ]]; then
 	exit 1
 fi
 
+"${ROOT_DIR}/tools/sdv_wtrl_render_readmes.sh"
+
 vsce publish -p "${VSCE_PAT}" -i "${VSIX_PATH}"

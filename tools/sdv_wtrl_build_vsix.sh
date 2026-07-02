@@ -4,6 +4,8 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 VSCODE_DIR="${ROOT_DIR}/vscode"
 
+"${ROOT_DIR}/tools/sdv_wtrl_render_readmes.sh"
+
 cd "${VSCODE_DIR}"
 
 if ! command -v vsce >/dev/null 2>&1; then
