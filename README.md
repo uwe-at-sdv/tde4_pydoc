@@ -1,8 +1,9 @@
 # 3DE4 Python API
 
-[![License](https://img.shields.io/badge/license-BSD--2--Clause-blue)]
-[![Version](https://img.shields.io/badge/version-0.1.3-blue)]
+[![License](https://img.shields.io/badge/license-BSD--2--Clause-blue)](vscode/LICENSE)
+[![Version](https://img.shields.io/badge/version-0.1.3-blue)](vscode/package.json)
 [![3DEqualizer4](https://img.shields.io/badge/3DE4-3dequalizer.com-brightgreen)](https://3dequalizer.com/)
+[![Marketplace](https://img.shields.io/badge/Marketplace-VS%20Code-blue)](https://marketplace.visualstudio.com/)
 
 This extension exposes the Waterloo documentation backend for the 3DE4 Python API
 as a VS Code MCP server definition.

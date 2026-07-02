@@ -9,7 +9,7 @@ if [[ $# -lt 1 || $# -gt 2 ]]; then
 fi
 
 VSIX_PATH="$1"
-PAT_FILE="${2:-${ROOT_DIR}/../sdv_doc_waterloo/TOKEN_MARKETPLACE}"
+PAT_FILE="${2:-${ROOT_DIR}/../../sdv_doc_waterloo/TOKEN_MARKETPLACE}"
 
 if [[ ! -f "${VSIX_PATH}" ]]; then
 	echo "VSIX file not found: ${VSIX_PATH}"

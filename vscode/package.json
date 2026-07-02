@@ -2,7 +2,7 @@
   "name": "tde4-pydoc",
   "displayName": "3DE4 Python API",
   "description": "VS Code MCP provider for the 3DE4 Python API documentation.",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "publisher": "uwe-at-sdv",
   "icon": "img/tde4_pydoc.logo.png",
   "engines": {
@@ -51,7 +51,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://example.invalid/3de4-python-api-extension.git"
+    "url": "https://github.com/uwe-at-sdv/tde4_pydoc.git"
   },
   "license": "BSD-2-Clause"
 }
