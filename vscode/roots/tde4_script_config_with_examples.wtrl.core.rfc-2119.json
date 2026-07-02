@@ -1,0 +1,594 @@
+{
+    "$schema": "https://sci-d-vis.com/schema/wtrl-json-0.1.0.schema.json",
+    "$id": "urn:waterlint:wtrl-json:0.19.3:core:rfc-2119:3bfa9b76dcdff00a6c68612f969a1d198fc4a25ff3906240a0e08fdc174507af",
+    "__WTRL_VERSION__": {
+        "waterloo": "0.10.8",
+        "schema": "0.1.0"
+    },
+    "__WTRL_META__": {
+        "generated_at": "2026-07-01T10:23:06+02:00",
+        "generator": "waterlint",
+        "scope": "core",
+        "flavour": "rfc-2119"
+    },
+    "__WTRL_ROLES__": {
+        "attr": "Attribute name",
+        "cmd": "Shell or CLI command",
+        "dfn": "Definition of a term",
+        "file": "File or path",
+        "func": "Function or callable",
+        "key": "Key on the keyboard",
+        "label": "Section/Subsection label",
+        "lit": "Literal text or code",
+        "mod": "Module name",
+        "op": "Operator symbol",
+        "opt": "Command-line option or flag",
+        "tag": "Tag or marker",
+        "term": "Domain-specific term",
+        "type": "Type name or annotation",
+        "value": "Concrete value",
+        "var": "Variable name",
+        "var_type": "Variable and type, like 'var:type'"
+    },
+    "__WTRL_SCOPES__": {
+        "public": {
+            "value": 10,
+            "description": ""
+        },
+        "extension": {
+            "value": 20,
+            "description": ""
+        },
+        "core": {
+            "value": 30,
+            "description": ""
+        }
+    },
+    "__WTRL_TOC_MODULES__": {
+        "tde4_script_config": "/__WTRL_OBJECTS__/tde4_script_config"
+    },
+    "__WTRL_TOC_CLASSES__": {
+        "tde4_script_config.config": "/__WTRL_OBJECTS__/tde4_script_config.config",
+        "tde4_script_config.tde4_config": "/__WTRL_OBJECTS__/tde4_script_config.tde4_config"
+    },
+    "__WTRL_TOC_CALLABLES__": {
+        "tde4_script_config.config.get": "/__WTRL_OBJECTS__/tde4_script_config.config.get",
+        "tde4_script_config.config.get_or_raise": "/__WTRL_OBJECTS__/tde4_script_config.config.get_or_raise",
+        "tde4_script_config.config.set": "/__WTRL_OBJECTS__/tde4_script_config.config.set",
+        "tde4_script_config.config.drop": "/__WTRL_OBJECTS__/tde4_script_config.config.drop",
+        "tde4_script_config.config.flush": "/__WTRL_OBJECTS__/tde4_script_config.config.flush"
+    },
+    "__WTRL_TOC_TYPES__": {
+        "tde4_script_config.IndexKey": "/__WTRL_OBJECTS__/tde4_script_config.IndexKey",
+        "tde4_script_config.IndexPath": "/__WTRL_OBJECTS__/tde4_script_config.IndexPath",
+        "tde4_script_config.IndexPathWithNull": "/__WTRL_OBJECTS__/tde4_script_config.IndexPathWithNull",
+        "tde4_script_config.ConfigValue": "/__WTRL_OBJECTS__/tde4_script_config.ConfigValue",
+        "tde4_script_config.IndexTree": "/__WTRL_OBJECTS__/tde4_script_config.IndexTree",
+        "tde4_script_config.TagEntries": "/__WTRL_OBJECTS__/tde4_script_config.TagEntries",
+        "tde4_script_config.EntriesByTag": "/__WTRL_OBJECTS__/tde4_script_config.EntriesByTag"
+    },
+    "__WTRL_TOC_VARIABLES__": {},
+    "__WTRL_TOC_CONSTANTS__": {},
+    "__WTRL_OBJECTS__": {
+        "tde4_script_config.IndexKey": {
+            "doc": {},
+            "doc_lines": [
+                "A supported index component type, either `int` or `str`."
+            ],
+            "annotation": "int | str",
+            "doc_lines_kind": "type"
+        },
+        "tde4_script_config.IndexPath": {
+            "doc": {},
+            "doc_lines": [
+                "A tuple of index components used to address one stored value."
+            ],
+            "annotation": "tuple[int | str, ...]",
+            "doc_lines_kind": "type"
+        },
+        "tde4_script_config.IndexPathWithNull": {
+            "doc": {},
+            "doc_lines": [
+                "A tuple representation used while traversing the tree for serialization."
+            ],
+            "annotation": "tuple[int | str | None, ...]",
+            "doc_lines_kind": "type"
+        },
+        "tde4_script_config.ConfigValue": {
+            "doc": {},
+            "doc_lines": [
+                "A stored scalar value, either `int`, `float`, or `str`."
+            ],
+            "annotation": "int | float | str",
+            "doc_lines_kind": "type"
+        },
+        "tde4_script_config.IndexTree": {
+            "doc": {},
+            "doc_lines": [
+                "The nested dictionary shape used to store one indexed value tree."
+            ],
+            "annotation": "dict[int | str | None, object]",
+            "doc_lines_kind": "type"
+        },
+        "tde4_script_config.TagEntries": {
+            "doc": {},
+            "doc_lines": [
+                "The mapping from index-type strings to index trees for one tag."
+            ],
+            "annotation": "dict[str, dict[int | str | None, object]]",
+            "doc_lines_kind": "type"
+        },
+        "tde4_script_config.EntriesByTag": {
+            "doc": {},
+            "doc_lines": [
+                "The top-level mapping from tags to their per-index-type trees."
+            ],
+            "annotation": "dict[str, dict[str, dict[int | str | None, object]]]",
+            "doc_lines_kind": "type"
+        },
+        "tde4_script_config": {
+            "path": "/server/devel/sdv/privat/uwe/source/py_3de4/script_config/tde4_script_config.py",
+            "doc": {
+                "Preamble": {
+                    "profile": "module",
+                    "normative_sections": [
+                        "Definitions",
+                        "Contract",
+                        "Public_classes",
+                        "Public_functions",
+                        "Public_types",
+                        "Public_variables",
+                        "Public_constants",
+                        "See_also"
+                    ],
+                    "scope": [
+                        "public"
+                    ]
+                },
+                "Definitions": {
+                    "Configuration_tag": {
+                        "variations": [],
+                        "text": [
+                            "A named value family addressed by zero or more integer and/or string indices."
+                        ]
+                    },
+                    "Index_path": {
+                        "variations": [],
+                        "text": [
+                            "The ordered tuple of index components used to address a stored value."
+                        ]
+                    },
+                    "Index_tree": {
+                        "variations": [],
+                        "text": [
+                            "The nested dictionary structure used internally to store values for one index-type string."
+                        ]
+                    }
+                },
+                "Contract": {
+                    "general": [
+                        "MUST provide a typed hierarchical configuration store backed by XML.",
+                        "MUST preserve values addressed by tag and mixed integer/string indices.",
+                        "MUST read and write the XML representation used by the 3DE4 script environment."
+                    ]
+                },
+                "Description": [
+                    "The module provides a reusable configuration tree and a 3DE4-aware wrapper that stores configuration files in the user's script_config directory."
+                ],
+                "Notes": {
+                    "XML writer import": [
+                        "The module tries `sdv_xml_writer` first and falls back to `sdv.xml.writer` for development."
+                    ],
+                    "Value types": [
+                        "Stored values are limited to `int`, `float`, and `str`."
+                    ]
+                },
+                "Public_classes": [
+                    "config",
+                    "tde4_config"
+                ],
+                "Class_overview": {
+                    "config": [
+                        "A reusable hierarchical configuration store backed by nested dictionaries and XML persistence."
+                    ],
+                    "tde4_config": [
+                        "Derives the base directory from the user's 3DE4 configuration directory and reuses config."
+                    ]
+                },
+                "Public_functions": [],
+                "Function_overview": {},
+                "Public_types": {
+                    "IndexKey": [
+                        "A supported index component type, either `int` or `str`."
+                    ],
+                    "IndexPath": [
+                        "A tuple of index components used to address one stored value."
+                    ],
+                    "IndexPathWithNull": [
+                        "A tuple representation used while traversing the tree for serialization."
+                    ],
+                    "ConfigValue": [
+                        "A stored scalar value, either `int`, `float`, or `str`."
+                    ],
+                    "IndexTree": [
+                        "The nested dictionary shape used to store one indexed value tree."
+                    ],
+                    "TagEntries": [
+                        "The mapping from index-type strings to index trees for one tag."
+                    ],
+                    "EntriesByTag": [
+                        "The top-level mapping from tags to their per-index-type trees."
+                    ]
+                },
+                "Public_variables": {},
+                "Public_constants": {},
+                "See_also": []
+            }
+        },
+        "tde4_script_config.config": {
+            "signature": {
+                "text": "config.__init__(self, basedir: 'str | os.PathLike[str]', identifier: 'str') -> 'None'",
+                "parameters": [
+                    {
+                        "name": "basedir",
+                        "kind": "POSITIONAL_OR_KEYWORD",
+                        "annotation": "str | os.PathLike[str]",
+                        "default": null
+                    },
+                    {
+                        "name": "identifier",
+                        "kind": "POSITIONAL_OR_KEYWORD",
+                        "annotation": "str",
+                        "default": null
+                    }
+                ],
+                "returns": "None"
+            },
+            "doc": {
+                "Preamble": {
+                    "profile": "class",
+                    "normative_sections": [
+                        "Contract",
+                        "Public_methods"
+                    ]
+                },
+                "Contract": {
+                    "general": [
+                        "MUST provide a hierarchical configuration store backed by nested dictionaries and XML persistence."
+                    ],
+                    "constructor": [
+                        "MUST accept a base directory and a configuration identifier.",
+                        "MUST derive the on-disk filename from the identifier by appending `.xml`.",
+                        "MUST load existing configuration data from that file when it exists.",
+                        "MUST leave the configuration empty when no file exists yet.",
+                        "MUST store the provided base directory as the root directory for the XML file."
+                    ]
+                },
+                "Public_methods": [
+                    "get",
+                    "get_or_raise",
+                    "set",
+                    "drop",
+                    "flush"
+                ],
+                "Method_overview": {
+                    "get": [
+                        "Return a value for a tag/index path or `config.undefined`."
+                    ],
+                    "get_or_raise": [
+                        "Return a value for a tag/index path and raise if it is missing."
+                    ],
+                    "set": [
+                        "Store a value and create missing containers on demand."
+                    ],
+                    "drop": [
+                        "Remove a value and clean up empty containers."
+                    ],
+                    "flush": [
+                        "Serialize the current configuration to XML."
+                    ]
+                }
+            },
+            "examples": [
+                "/__WTRL_EXAMPLES__/sha256_ff114b2ee9f40d03492fd989be351f72208fe8af1da714575492cf8088966c6e"
+            ]
+        },
+        "tde4_script_config.config.get": {
+            "signature": {
+                "text": "config.get(self, tag: 'str', *index: 'int | str') -> 'int | float | str | type[config.undefined]'",
+                "parameters": [
+                    {
+                        "name": "tag",
+                        "kind": "POSITIONAL_OR_KEYWORD",
+                        "annotation": "str",
+                        "default": null
+                    },
+                    {
+                        "name": "index",
+                        "kind": "VAR_POSITIONAL",
+                        "annotation": "int | str",
+                        "default": null
+                    }
+                ],
+                "returns": "int | float | str | type[config.undefined]"
+            },
+            "doc": {
+                "Preamble": {
+                    "profile": "method",
+                    "normative_sections": [
+                        "Contract",
+                        "Parameters",
+                        "Returns",
+                        "Raises"
+                    ]
+                },
+                "Contract": {
+                    "general": [
+                        "MUST return the value stored for the given tag and index path.",
+                        "MUST return `config.undefined` when the entry does not exist."
+                    ]
+                },
+                "Parameters": {
+                    "tag": [
+                        "The configuration tag name."
+                    ],
+                    "index": [
+                        "Zero or more index components used to address the value."
+                    ]
+                },
+                "Returns": [
+                    "The stored `int`, `float`, or `str` value, or `config.undefined` if the entry is missing."
+                ],
+                "Raises": {}
+            }
+        },
+        "tde4_script_config.config.get_or_raise": {
+            "signature": {
+                "text": "config.get_or_raise(self, tag: 'str', *index: 'int | str') -> 'int | float | str'",
+                "parameters": [
+                    {
+                        "name": "tag",
+                        "kind": "POSITIONAL_OR_KEYWORD",
+                        "annotation": "str",
+                        "default": null
+                    },
+                    {
+                        "name": "index",
+                        "kind": "VAR_POSITIONAL",
+                        "annotation": "int | str",
+                        "default": null
+                    }
+                ],
+                "returns": "int | float | str"
+            },
+            "doc": {
+                "Preamble": {
+                    "profile": "method",
+                    "normative_sections": [
+                        "Contract",
+                        "Parameters",
+                        "Returns",
+                        "Raises"
+                    ]
+                },
+                "Contract": {
+                    "general": [
+                        "MUST return the value stored for the given tag and index path.",
+                        "MUST raise when the entry does not exist."
+                    ]
+                },
+                "Parameters": {
+                    "tag": [
+                        "The configuration tag name."
+                    ],
+                    "index": [
+                        "Zero or more index components used to address the value."
+                    ]
+                },
+                "Returns": [
+                    "The stored `int`, `float`, or `str` value."
+                ],
+                "Raises": {
+                    "NoSuchTagError": [
+                        "Raised when the tag does not exist."
+                    ],
+                    "NoSuchIndexTypeError": [
+                        "Raised when the tag exists but no matching index type exists."
+                    ],
+                    "NoSuchIndexError": [
+                        "Raised when the tag and index type exist but the exact index path is missing."
+                    ]
+                }
+            }
+        },
+        "tde4_script_config.config.set": {
+            "signature": {
+                "text": "config.set(self, tag: 'str', value: 'ConfigValue', *index: 'IndexKey') -> 'config'",
+                "parameters": [
+                    {
+                        "name": "tag",
+                        "kind": "POSITIONAL_OR_KEYWORD",
+                        "annotation": "str",
+                        "default": null
+                    },
+                    {
+                        "name": "value",
+                        "kind": "POSITIONAL_OR_KEYWORD",
+                        "annotation": "ConfigValue",
+                        "default": null
+                    },
+                    {
+                        "name": "index",
+                        "kind": "VAR_POSITIONAL",
+                        "annotation": "IndexKey",
+                        "default": null
+                    }
+                ],
+                "returns": "config"
+            },
+            "doc": {
+                "Preamble": {
+                    "profile": "method",
+                    "normative_sections": [
+                        "Contract",
+                        "Parameters",
+                        "Returns",
+                        "Raises"
+                    ]
+                },
+                "Contract": {
+                    "general": [
+                        "MUST store the given value at the given tag and index path.",
+                        "MUST create missing tag and index containers on demand.",
+                        "MUST return |Self| for chaining."
+                    ]
+                },
+                "Parameters": {
+                    "tag": [
+                        "The configuration tag name."
+                    ],
+                    "value": [
+                        "The value to store. Must be `int`, `float`, or `str`."
+                    ],
+                    "index": [
+                        "Zero or more index components used to address the value."
+                    ]
+                },
+                "Returns": [
+                    "|Self|."
+                ],
+                "Raises": {}
+            }
+        },
+        "tde4_script_config.config.drop": {
+            "signature": {
+                "text": "config.drop(self, tag: 'str', *index: 'int | str') -> 'None'",
+                "parameters": [
+                    {
+                        "name": "tag",
+                        "kind": "POSITIONAL_OR_KEYWORD",
+                        "annotation": "str",
+                        "default": null
+                    },
+                    {
+                        "name": "index",
+                        "kind": "VAR_POSITIONAL",
+                        "annotation": "int | str",
+                        "default": null
+                    }
+                ],
+                "returns": "None"
+            },
+            "doc": {
+                "Preamble": {
+                    "profile": "method",
+                    "normative_sections": [
+                        "Contract",
+                        "Parameters",
+                        "Returns",
+                        "Raises"
+                    ]
+                },
+                "Contract": {
+                    "general": [
+                        "MUST remove the value stored at the given tag and index path when it exists.",
+                        "MUST remove empty intermediate containers after deletion.",
+                        "MUST do nothing when the entry does not exist."
+                    ]
+                },
+                "Parameters": {
+                    "tag": [
+                        "The configuration tag name."
+                    ],
+                    "index": [
+                        "Zero or more index components used to address the value."
+                    ]
+                },
+                "Returns": [
+                    "|None|"
+                ],
+                "Raises": {}
+            }
+        },
+        "tde4_script_config.config.flush": {
+            "signature": {
+                "text": "config.flush(self) -> 'config'",
+                "parameters": [],
+                "returns": "config"
+            },
+            "doc": {
+                "Preamble": {
+                    "profile": "method",
+                    "normative_sections": [
+                        "Contract",
+                        "Parameters",
+                        "Returns",
+                        "Raises"
+                    ]
+                },
+                "Contract": {
+                    "general": [
+                        "MUST serialize the current configuration to XML in the configured path.",
+                        "MUST return |Self| for chaining."
+                    ]
+                },
+                "Parameters": {},
+                "Returns": [
+                    "|Self|."
+                ],
+                "Raises": {
+                    "ModuleNotFoundError": [
+                        "Raised when no XML writer module is available in the current environment."
+                    ]
+                }
+            }
+        },
+        "tde4_script_config.tde4_config": {
+            "signature": {
+                "text": "tde4_config.__init__(self, identifier: 'str') -> 'None'",
+                "parameters": [
+                    {
+                        "name": "identifier",
+                        "kind": "POSITIONAL_OR_KEYWORD",
+                        "annotation": "str",
+                        "default": null
+                    }
+                ],
+                "returns": "None"
+            },
+            "doc": {
+                "Preamble": {
+                    "profile": "class",
+                    "normative_sections": [
+                        "Contract",
+                        "Derived_from"
+                    ]
+                },
+                "Contract": {
+                    "general": [
+                        "MUST store configuration files in the user's script_config directory."
+                    ],
+                    "constructor": [
+                        "MUST accept a configuration identifier.",
+                        "MUST resolve the 3DE4 home directory based on the operating system.",
+                        "MUST create the script_config directory when it does not exist yet.",
+                        "MUST delegate to |type|`config` with the resolved base directory."
+                    ]
+                },
+                "Derived_from": [
+                    "config"
+                ]
+            }
+        }
+    },
+    "__WTRL_EXAMPLES__": {
+        "sha256_ff114b2ee9f40d03492fd989be351f72208fe8af1da714575492cf8088966c6e": {
+            "lang": "python",
+            "hash": "ff114b2ee9f40d03492fd989be351f72208fe8af1da714575492cf8088966c6e",
+            "code": "# 3DE4.script.name:\ttde4_t4sc_3de4\n# 3DE4.script.version:\tv0.1.0\n# 3DE4.script.comment:\tSmoke test for tde4_script_config\n\nfrom __future__ import annotations\n\nfrom dataclasses import dataclass\nfrom typing import Any\n\nimport tde4\nimport tde4_script_config as t4sc\n\n\n@dataclass(frozen=True)\nclass FieldSpec:\n\ttag: str\n\tindex_path: tuple[int | str, ...]\n\tvalue_type: str\n\twidget_name: str\n\n\tdef label(self) -> str:\n\t\tindex_text = \" \".join(repr(index) for index in self.index_path)\n\t\tif index_text:\n\t\t\treturn f\"{self.tag} {index_text} [{self.value_type}]\"\n\t\treturn f\"{self.tag} [{self.value_type}]\"\n\n\nCONFIG_ID = \"tde4_t4sc_3de4\"\nFIELDS = (\n\tFieldSpec(\"MyTag\", (\"A\", \"1\"), \"string\", \"value_0\"),\n\tFieldSpec(\"MyTag\", (\"A\", 2), \"int\", \"value_1\"),\n\tFieldSpec(\"MyTag\", (3,), \"float\", \"value_2\"),\n\tFieldSpec(\"OtherTag\", (\"B\", \"2\"), \"string\", \"value_3\"),\n\tFieldSpec(\"OtherTag\", (4,), \"int\", \"value_4\"),\n)\n\n\ndef _format_value(value: int | float | str) -> str:\n\treturn str(value)\n\n\ndef _parse_value(raw: str, value_type: str) -> int | float | str:\n\tif value_type == \"string\":\n\t\treturn raw\n\tif value_type == \"int\":\n\t\treturn int(raw)\n\tif value_type == \"float\":\n\t\treturn float(raw)\n\traise ValueError(f\"Unsupported value type: {value_type!r}\")\n\n\ndef _load_config_values(requester: Any, config: t4sc.tde4_config) -> None:\n\tfor field in FIELDS:\n\t\tvalue = config.get(field.tag, *field.index_path)\n\t\tif value is t4sc.config.undefined:\n\t\t\tcontinue\n\t\ttde4.setWidgetValue(requester, field.widget_name, _format_value(value))\n\n\ndef _read_draft_values(requester: Any) -> dict[FieldSpec, int | float | str]:\n\tdraft: dict[FieldSpec, int | float | str] = {}\n\tfor field in FIELDS:\n\t\traw = tde4.getWidgetValue(requester, field.widget_name)\n\t\tdraft[field] = _parse_value(str(raw), field.value_type)\n\treturn draft\n\n\ndef _write_config_values(config: t4sc.tde4_config, values: dict[FieldSpec, int | float | str]) -> None:\n\tfor field, value in values.items():\n\t\tconfig.set(field.tag, value, *field.index_path)\n\tconfig.flush()\n\n\ndef main() -> None:\n\tconfig = t4sc.tde4_config(CONFIG_ID)\n\trequester = tde4.createCustomRequester()\n\ttry:\n\t\tfor field in FIELDS:\n\t\t\ttde4.addTextFieldWidget(requester, field.widget_name, field.label(), \"\")\n\t\t_load_config_values(requester, config)\n\t\twhile True:\n\t\t\tbutton = tde4.postCustomRequester(requester, \"tde4_t4sc_3de4\", 760, 220, \"OK\", \"Cancel\")\n\t\t\tif button != 1:\n\t\t\t\tbreak\n\t\t\ttry:\n\t\t\t\tdraft_values = _read_draft_values(requester)\n\t\t\texcept ValueError as exc:\n\t\t\t\ttde4.postQuestionRequester(\"tde4_t4sc_3de4\", f\"Invalid value: {exc}\", \"OK\")\n\t\t\t\tcontinue\n\t\t\t_write_config_values(config, draft_values)\n\t\t\tbreak\n\tfinally:\n\t\ttde4.deleteCustomRequester(requester)\n\n\nmain()\n",
+            "referenced_by": [
+                "tde4_script_config.config"
+            ]
+        }
+    }
+}

@@ -1,0 +1,28 @@
+# Waterloo MCP server configuration for stdio transport.
+#
+# This file is intended for the VS Code extension in this repository.
+# It is resolved relative to this file, so the root paths point to the
+# bundled root copies under vscode/roots/.
+
+[server]
+transport = "stdio"
+
+[security]
+# Security settings are only relevant for streamable-http, not stdio.
+
+[logging]
+level = "INFO"
+access_log = false
+config_path = "logging.toml"
+
+[[roots]]
+path = "../roots/tde4_with_examples.wtrl.core.rfc-2119.json"
+label = "3DE4 Python API Reference"
+enabled = true
+kind = "wtrl-json"
+
+[[roots]]
+path = "../roots/tde4_script_config_with_examples.wtrl.core.rfc-2119.json"
+label = "3DE4 Python API: Script configuration persistence"
+enabled = true
+kind = "wtrl-json"
