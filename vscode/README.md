@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-BSD--2--Clause-blue)](LICENSE)
 [![Version](https://img.shields.io/badge/version-0.1.5-blue)](./package.json)
 [![3DEqualizer4](https://img.shields.io/badge/3DE4-3dequalizer.com-brightgreen)](https://3dequalizer.com/)
-[![Marketplace](https://img.shields.io/badge/Marketplace-VS%20Code-blue)](https://marketplace.visualstudio.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-uwe--at--sdv-181717?logo=github)](https://github.com/uwe-at-sdv/tde4_pydoc)
 
 This extension exposes the Waterloo documentation backend for the 3DE4 Python API
 as a VS Code MCP server definition.
