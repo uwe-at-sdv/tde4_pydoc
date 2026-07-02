@@ -1,0 +1,13 @@
+# Keep GitHub language stats focused on source (exclude generated/vendor artifacts)
+
+# Node dependencies (if ever committed by mistake)
+**/node_modules/** linguist-vendored
+
+# Common generated outputs
+dist/** linguist-generated=true
+out/** linguist-generated=true
+coverage/** linguist-generated=true
+*.min.js linguist-generated=true
+
+# Build/package artifacts
+**/*.vsix linguist-generated=true
