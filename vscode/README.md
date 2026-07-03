@@ -9,8 +9,8 @@ This extension exposes the Waterloo documentation backend for the 3DE4 Python AP
 as a VS Code MCP server definition.
 
 It is intentionally small: the extension does not generate docstrings, validate
-Waterloo files, or bridge to a separate Python backend. It registers a local
-`wtrl_mcp` server definition that points at the bundled Waterloo roots.
+Waterloo docstrings, or bridge to a separate Python backend. It registers a local
+`wtrl_mcp` server definition that points at the bundled waterloo-style documentation roots.
 
 ## Requirements
 
