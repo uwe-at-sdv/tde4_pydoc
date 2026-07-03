@@ -21,6 +21,14 @@ fi
 VERSION="$(node -p "require('./package.json').version")"
 VSIX_NAME="tde4-pydoc-${VERSION}.vsix"
 
+VERSION_REGEX=${VERSION//'.'/'\.'}
+
+# Don't forget to update CHANGELOG.
+if [[ -z "$(egrep "\- ${VERSION_REGEX}\s\[[0-9]{4}\-[0-9]{2}\-[0-9]{2}\]:" CHANGELOG)" ]]; then
+	echo "version not mentioned in CHANGELOG"
+	exit 1
+fi
+
 echo "Building ${VSIX_NAME}"
 vsce package --no-dependencies --out "${VSIX_NAME}"
 echo "Wrote ${VSCODE_DIR}/${VSIX_NAME}"
