@@ -55,10 +55,11 @@ use the companion extension for editing Waterloo docstrings themselves.
 4. Point the client at the 3DE4 Python API MCP server definition.
 5. If the client does not start the server automatically, trigger MCP tool selection once manually. Some clients need that nudge before they start the server process.
 
-For a local test install from the repository root:
+For a local test install from the repository root (requires `vsce`; install with `npm install @vscode/vsce`):
 
 ```text
-tools/sdv_wtrl_install_vsix.sh vscode/tde4-pydoc-<version>.vsix
+tools/sdv_pydoc_build_vsix.sh
+tools/sdv_pydoc_install_vsix.sh vscode/tde4-pydoc-<version>.vsix
 ```
 
 ## Configuration
