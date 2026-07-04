@@ -113,7 +113,7 @@ function registerMcpProvider(context) {
 		provideMcpServerDefinitions: () => [createMcpServerDefinition(context.extensionPath)],
 	};
 
-	const disposable = vscode.lm.registerMcpServerDefinitionProvider('tde4_pydoc.mcpProvider', provider);
+	const disposable = vscode.lm.registerMcpServerDefinitionProvider('tde4-pydoc.mcpProvider', provider);
 	context.subscriptions.push(disposable);
 	fout.appendLine('3DE4 Python API MCP provider: registered.');
 }
