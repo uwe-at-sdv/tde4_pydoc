@@ -6,6 +6,8 @@ Format:
 	Summary.
 
 #----- extend here --------------------------------------------#
+- 0.2.0 [2026-07-04]:
+	New semantic roles in sdv.doc.waterloo
 - 0.1.8 [2026-07-04]:
 	Improved docstring in tde4
 - 0.1.7 [2026-07-04]:
