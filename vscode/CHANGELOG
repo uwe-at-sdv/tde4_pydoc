@@ -1,12 +1,11 @@
 # Changelog
 
-# Changelog
-
 Format:
 
 - VERSION [YYYY-MM-DD]:
 	Summary.
 
+#----- extend here --------------------------------------------#
 - 0.1.8 [2026-07-04]:
 	Improved docstring in tde4
 - 0.1.7 [2026-07-04]:
