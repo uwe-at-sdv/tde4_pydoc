@@ -7,6 +7,10 @@ Format:
 - VERSION [YYYY-MM-DD]:
 	Summary.
 
+- 0.1.8 [2026-07-04]:
+	Improved docstring in tde4
+- 0.1.7 [2026-07-04]:
+	Improved docstring in tde4
 - 0.1.6 [2026-07-03]:
 	Updated READMEs
 - 0.1.5 [2026-07-02]:
