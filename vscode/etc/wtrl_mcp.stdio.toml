@@ -5,13 +5,14 @@
 # bundled root copies under vscode/roots/.
 
 [server]
+identity = "tde4_pydoc-stdio-vscode"
 transport = "stdio"
 
 [security]
 # Security settings are only relevant for streamable-http, not stdio.
 
 [logging]
-level = "INFO"
+level = "WARNING"
 access_log = false
 config_path = "logging.toml"
 

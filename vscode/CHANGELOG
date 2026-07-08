@@ -6,6 +6,14 @@ Format:
 	Summary.
 
 #----- extend here --------------------------------------------#
+- 0.2.4 [2026-07-08]:
+	Bugfix in Config
+- 0.2.3 [2026-07-08]:
+	Stable server identity entry added
+- 0.2.2 [2026-07-07]:
+	Test
+- 0.2.1 [2026-07-07]:
+	Official logo
 - 0.2.0 [2026-07-04]:
 	New semantic roles in sdv.doc.waterloo
 - 0.1.8 [2026-07-04]:

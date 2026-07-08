@@ -6,61 +6,23 @@
 version = 1
 disable_existing_loggers = false
 
-[formatters.default]
-"()" = "sdv.doc.waterloo.mcp.wtrl_logging.GroupingFormatter"
-fmt = "%(asctime)s %(levelprefix)s [%(wtrl_request_id)s] %(message)s [%(funcName)s]"
-datefmt = "%Y-%m-%dT%H:%M:%S"
-use_colors = true
-timestamp_window = 0.5
-
-[formatters.access]
-"()" = "sdv.doc.waterloo.mcp.wtrl_logging.GroupingAccessFormatter"
-fmt = '%(asctime)s %(levelprefix)s [%(wtrl_request_id)s] %(client_addr)s "%(request_line)s" %(status_code)s [%(funcName)s]'
-datefmt = "%Y-%m-%dT%H:%M:%S"
-use_colors = true
-
-[handlers.default]
-class = "logging.StreamHandler"
-formatter = "default"
-stream = "ext://sys.stderr"
-
-[handlers.access]
-class = "logging.StreamHandler"
-formatter = "access"
-stream = "ext://sys.stdout"
-
 [formatters.waterloo]
 "()" = "sdv.doc.waterloo.mcp.wtrl_logging.GroupingFormatter"
-fmt = "%(asctime)s %(levelprefix)s [%(wtrl_request_id)s] WTRL %(message)s"
-datefmt = "%Y-%m-%dT%H:%M:%S"
-use_colors = true
+fmt = "%(levelprefix)s WTRL %(message)s"
+use_colors = false
 timestamp_window = 0.5
 
 [handlers.waterloo]
 class = "logging.StreamHandler"
+level = "WARNING"
 formatter = "waterloo"
 stream = "ext://sys.stderr"
 
-[loggers.uvicorn]
-level = "INFO"
-handlers = ["default"]
-propagate = false
-
-[loggers."uvicorn.error"]
-level = "INFO"
-handlers = ["default"]
-propagate = false
-
-[loggers."uvicorn.access"]
-level = "INFO"
-handlers = ["access"]
-propagate = false
-
 [loggers."wtrl_mcp"]
-level = "INFO"
+level = "WARNING"
 handlers = ["waterloo"]
 propagate = false
 
 [root]
-level = "INFO"
-handlers = ["default"]
+level = "WARNING"
+handlers = ["waterloo"]

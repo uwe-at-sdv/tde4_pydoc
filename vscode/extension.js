@@ -120,7 +120,6 @@ function registerMcpProvider(context) {
 
 function activate(context) {
 	context.subscriptions.push(fout);
-	fout.show(true);
 	registerMcpProvider(context);
 }
 
