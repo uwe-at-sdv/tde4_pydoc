@@ -47,8 +47,8 @@ tmp_badges_github="$(mktemp)"
 tmp_badges_azure="$(mktemp)"
 trap 'rm -f "${tmp_badges_github}" "${tmp_badges_azure}"' EXIT
 
-render_badges "${TEMPLATE_DIR}/README_BADGE_GITHUB.template.md" "${tmp_badges_github}"
-render_badges "${TEMPLATE_DIR}/README_BADGE_AZURE.template.md" "${tmp_badges_azure}"
+render_badges "${TEMPLATE_DIR}/README_BADGES_GITHUB.template.md" "${tmp_badges_github}"
+render_badges "${TEMPLATE_DIR}/README_BADGES_AZURE.template.md" "${tmp_badges_azure}"
 
 render_readme "${TEMPLATE_DIR}/README_GITHUB.template.md" "${tmp_badges_github}" "${ROOT_DIR}/README.md"
 render_readme "${TEMPLATE_DIR}/README_AZURE.template.md" "${tmp_badges_azure}" "${VSCODE_DIR}/README.md"
