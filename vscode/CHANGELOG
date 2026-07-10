@@ -6,6 +6,8 @@ Format:
 	Summary.
 
 #----- extend here --------------------------------------------#
+- 0.2.5 [2026-07-10]:
+	Bugfix tde4.addScaleWidget docstring
 - 0.2.4 [2026-07-08]:
 	Bugfix in Config
 - 0.2.3 [2026-07-08]:

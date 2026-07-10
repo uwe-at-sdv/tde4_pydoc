@@ -1,12 +1,12 @@
 {
     "$schema": "https://sci-d-vis.com/schema/wtrl-json-0.1.0.schema.json",
-    "$id": "urn:waterlint:wtrl-json:0.20.4:core:rfc-2119:c223eab1e85fceca122c139cf41b4a9c70be6a37197d490f7c12d7bcb733897f",
+    "$id": "urn:waterlint:wtrl-json:0.20.4:core:rfc-2119:9ded74caca9f4318ef2a311d1d43a4b26f0fb755827ddb3b0bdbcfe6d4c5366d",
     "__WTRL_VERSION__": {
-        "waterloo": "0.12.0",
+        "waterloo": "0.12.4",
         "schema": "0.1.0"
     },
     "__WTRL_META__": {
-        "generated_at": "2026-07-07T18:11:46+02:00",
+        "generated_at": "2026-07-10T18:22:34+02:00",
         "generator": "waterlint",
         "scope": "core",
         "flavour": "rfc-2119"
@@ -8873,7 +8873,7 @@
         },
         "tde4.addScaleWidget": {
             "signature": {
-                "text": "addScaleWidget(requester_id: 'RequesterID_t', widget_name: 'WidgetName_t', label: 'str', value_type: 'NumericType_t', min: 'float | None' = None, max: 'float | None' = None, default_value: 'float | None' = None, mmb_increment: 'float | None' = None) -> 'None'",
+                "text": "addScaleWidget(requester_id: 'RequesterID_t', widget_name: 'WidgetName_t', label: 'str', value_type: 'NumericType_t', min: 'int | float', max: 'int | float', default_value: 'int | float', mmb_increment: 'int | float | None' = None) -> 'None'",
                 "parameters": [
                     {
                         "name": "requester_id",
@@ -8902,25 +8902,25 @@
                     {
                         "name": "min",
                         "kind": "POSITIONAL_OR_KEYWORD",
-                        "annotation": "float | None",
-                        "default": "None"
+                        "annotation": "int | float",
+                        "default": null
                     },
                     {
                         "name": "max",
                         "kind": "POSITIONAL_OR_KEYWORD",
-                        "annotation": "float | None",
-                        "default": "None"
+                        "annotation": "int | float",
+                        "default": null
                     },
                     {
                         "name": "default_value",
                         "kind": "POSITIONAL_OR_KEYWORD",
-                        "annotation": "float | None",
-                        "default": "None"
+                        "annotation": "int | float",
+                        "default": null
                     },
                     {
                         "name": "mmb_increment",
                         "kind": "POSITIONAL_OR_KEYWORD",
-                        "annotation": "float | None",
+                        "annotation": "int | float | None",
                         "default": "None"
                     }
                 ],
@@ -8952,7 +8952,11 @@
                     ],
                     "requires": [
                         "The custom requester |var|`requester_id` MUST be created with |func|`tde4.createCustomRequester`.",
-                        "The widget name |var|`widget_name` SHOULD be unique within the requester."
+                        "The widget name |var|`widget_name` SHOULD be unique within the requester.",
+                        "If |var|`value_type` is |value|`\"INT\"`, arguments |var|`min`, |var|`max`, |var|`default_value`,",
+                        "and |var|`mmb_increment` if specified, MUST be integer values.",
+                        "If |var|`value_type` is |value|`\"DOUBLE\"`, arguments |var|`min`, |var|`max`, |var|`default_value`,",
+                        "and |var|`mmb_increment` if specified, MUST be numeric values accepted as floating-point values."
                     ]
                 },
                 "Parameters": {
