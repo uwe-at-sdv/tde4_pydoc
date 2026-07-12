@@ -1,0 +1,41 @@
+# Changelog
+
+Format:
+
+- VERSION [YYYY-MM-DD]:
+	* Summary.
+
+#----- extend here --------------------------------------------#
+- 0.2.6 [2026-07-10]:
+	* Packaging details
+- 0.2.5 [2026-07-10]:
+	* Bugfix tde4.addScaleWidget docstring
+- 0.2.4 [2026-07-08]:
+	* Bugfix in Config
+- 0.2.3 [2026-07-08]:
+	* Stable server identity entry added
+- 0.2.2 [2026-07-07]:
+	* Test
+- 0.2.1 [2026-07-07]:
+	* Official logo
+- 0.2.0 [2026-07-04]:
+	* New semantic roles in sdv.doc.waterloo
+- 0.1.8 [2026-07-04]:
+	* Improved docstring in tde4
+- 0.1.7 [2026-07-04]:
+	* Improved docstring in tde4
+- 0.1.6 [2026-07-03]:
+	* Updated READMEs
+- 0.1.5 [2026-07-02]:
+	* Minor changes
+- 0.1.4 [2026-07-02]:
+	* Minor changes
+- 0.1.3 [2026-07-02]:
+	* Minor changes
+- 0.1.2 [2026-07-02]:
+	* Better README, more diagnostics
+- 0.1.2 [2026-07-02]:
+	* Add the extension icon and package the bundled logo with the VSIX.
+	* Keep the extension focused on the MCP provider only.
+- 0.1.1 [2026-07-02]:
+	* Initial marketplace-ready packaging of the 3DE4 Python API MCP provider.
