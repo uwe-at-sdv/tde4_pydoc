@@ -1,8 +1,9 @@
 # 3DE4 Python API
 
 [![License](https://img.shields.io/badge/license-BSD--2--Clause-blue)](LICENSE)
-[![Version](https://img.shields.io/badge/version-0.2.6-orange)](./package.json)
+[![Version](https://img.shields.io/badge/version-0.2.8-orange)](./package.json)
 [![3DEqualizer4](https://img.shields.io/badge/3DE4-3dequalizer.com-brightgreen)](https://3dequalizer.com/)
+[![Related](https://img.shields.io/badge/WTRL-Waterloo--Docstrings-932725)](https://github.com/uwe-at-sdv/sdv_doc_waterloo)
 [![GitHub](https://img.shields.io/badge/GitHub-tde4_pydoc-181717?logo=github)](https://github.com/uwe-at-sdv/tde4_pydoc)
 
 This extension exposes the Waterloo documentation backend for the 3DE4 Python API

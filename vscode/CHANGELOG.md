@@ -6,6 +6,10 @@ Format:
 	* Summary.
 
 #----- extend here --------------------------------------------#
+- 0.2.8 [2026-07-15]:
+	* Packaging details
+- 0.2.7 [2026-07-15]:
+	* Packaging details
 - 0.2.6 [2026-07-10]:
 	* Packaging details
 - 0.2.5 [2026-07-10]:
